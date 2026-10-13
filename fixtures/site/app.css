@@ -1,0 +1,9 @@
+/* Microblog fixture styles - deliberately class-free where possible so
+   tests must rely on ids/roles, mirroring fragile real-world scraping. */
+body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 32rem; }
+header { display: flex; justify-content: space-between; align-items: baseline; }
+#whoami { color: #666; font-size: 0.9rem; }
+.post { list-style: none; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+textarea { width: 100%; }
+.row { display: flex; justify-content: flex-end; }
+#composer-msg { color: #080; }

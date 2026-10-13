@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Microblog - offline fixture</title>
+<link rel="stylesheet" href="/site/app.css">
+</head>
+<body>
+<header>
+  <h1>Microblog</h1>
+  <div id="whoami">not logged in</div>
+</header>
+
+<!-- login view (shown when no session cookie) -->
+<section id="login-view" hidden>
+  <h2>Sign in</h2>
+  <form id="login-form" method="POST" action="/site/api/login">
+    <label>Username <input name="user" id="login-user" autocomplete="off"></label>
+    <label>Password <input name="password" type="password" id="login-pass"></label>
+    <button type="submit" id="login-submit">Sign in</button>
+  </form>
+  <p id="login-error" hidden>Bad credentials</p>
+</section>
+
+<!-- main view (shown when logged in) -->
+<section id="main-view" hidden>
+  <h2>What's happening?</h2>
+  <form id="composer">
+    <textarea id="composer-text" rows="3" maxlength="280"
+      placeholder="Share something"></textarea>
+    <div class="row">
+      <button type="submit" id="post-btn">Post</button>
+    </div>
+  </form>
+  <p id="composer-msg" role="status" hidden></p>
+
+  <h2>Feed</h2>
+  <ul id="feed"></ul>
+</section>
+
+<script src="/site/app.js"></script>
+</body>
+</html>
