@@ -56,7 +56,6 @@ python3 tests/test_all.py
 - `ws.py` — minimal RFC 6455 WebSocket client (stdlib)
 - `fixture_server.py` + `fixtures/` — the offline "Microblog" site/API
 - `tests/test_all.py` — the offline suite
-- `PLAN.md` — problem, goals, 3 checkpoints, rollback
 
 ## License
 
